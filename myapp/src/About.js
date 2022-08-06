@@ -1,4 +1,5 @@
 import React from "react";
+import Button from 'react-bootstrap/Button';
 class About extends React.Component{
     
     constructor()
@@ -23,11 +24,12 @@ class About extends React.Component{
         return (<div>
             <h2>{this.props.name}</h2>
            
-            <h1>About Class Component</h1>
-            <h2>{this.state.name}</h2>
-            <h2>{this.state.age}</h2>
+            <h4>About Class Component</h4>
+            <h5>{this.state.name}</h5>
+            <h5>{this.state.age}</h5>
             
-            <button onClick={()=>{this.setState({name:'Vartika'})}}>State Update</button>
+            {/* <button onClick={()=>{this.setState({name:'Vartika'})}}>State Update</button> */}
+            <Button variant="secondary" onClick={()=>{this.setState({name:'Vartika'})}}>STATE CHANGE</Button>{' '}
         </div>)
     }
 }

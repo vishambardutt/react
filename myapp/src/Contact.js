@@ -1,4 +1,5 @@
 import React,{useEffect, useState} from 'react';
+import Button from 'react-bootstrap/esm/Button';
 
 function Contact (props)
 {
@@ -22,19 +23,22 @@ function Contact (props)
    }
     let data = "Contact us Component"
     return (
-        <div><h1>Contact us  Component</h1>
-        <h2><input type='text'value={val} onChange = {vish}/><button onClick={vish}>Click Me</button></h2>
-       <h2><button onClick={()=>alert(val)}>Click ME..</button></h2> 
+        <div><h4>Contact us  Component</h4>
+        <h4><input type='text'value={val} onChange = {vish}/> <Button variant="danger" type='text'value={val} onChange = {vish}>Click Me</Button></h4>
+       
+     
+       <Button variant="dark" onClick={()=>alert(val)}>CLICK ME</Button>
         
-        {data}
+       <h4>{data}</h4> 
         
         {props.name}
-         <h2>Name:{ name}</h2>
-         <h2>Age:{ age}</h2> 
-        <button onClick={()=>setName('Vartika Jakhmola')}>Update State</button>
-         <button onClick={()=>setAge(10)}>Update Age</button>
+         <h4>Name:{ name}</h4>
+         <h4>Age:{ age}</h4> 
+      
+        <Button variant="info" onClick={()=>setName('Vartika Jakhmola')}>UPDATE STATE</Button>{' '}
          {/* Events */}
-         <button onClick={()=>{console.log('Hello form on Click')}}>Click Me</button>
+        
+         <Button variant="warning" onClick={()=>setAge(10)}>UPDATE AGE</Button>{' '}
         </div>
     )
 
